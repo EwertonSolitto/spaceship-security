@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {Alert, Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import * as Clipboard from "expo-clipboard";
 
 import styles from './HomeStyles';
 import { StatusBar } from 'expo-status-bar';
@@ -12,6 +13,11 @@ export default function Home() {
     const newPassword = passwordGenerator(['numbers', 'capital letters', 'lowercase letters', 'special'], 8)
 
     setPassword(newPassword)
+  }
+
+  function copyPassword() {
+    Clipboard.setStringAsync(password)
+    Alert.alert("", "Password copied successfully!")
   }
 
   return (
@@ -30,7 +36,7 @@ export default function Home() {
       <TouchableOpacity style={styles.button} onPress={createPassword}>
         <Text style={styles.buttonText}>🚀 Generate Password</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={copyPassword}>
         <Text style={styles.buttonText}>Copy</Text>
       </TouchableOpacity>
 
