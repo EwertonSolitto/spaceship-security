@@ -6,26 +6,26 @@ export default function passwordGenerator(optionsSelected: TCharacters[], length
   const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
   const special = `/[!@#$%¨&*()-+=_,.<>;:~^'"[]{}|`
 
-  const characters = ""
+  let characters = ""
 
   if (optionsSelected.length === 4) {
-    characters.concat(numbers, capitalLetters, lowercaseLetters, special)
+    characters += numbers.concat(capitalLetters, lowercaseLetters, special)
   } else {
     optionsSelected.forEach((option) => {
       if (option === "numbers") {
-        characters.concat(numbers)
+        characters += numbers
       } else if (option === "capital letters") {
-        characters.concat(capitalLetters)
+        characters += capitalLetters
       } else if (option === "lowercase letters") {
-        characters.concat(lowercaseLetters)
-      } else if (option === "special") characters.concat(special)
+        characters += lowercaseLetters
+      } else if (option === "special") characters += special
     })
   }
 
-  const password = ""
+  let password = ""
 
   for(let i = 0; i < length; i++) {
-    password.concat(characters[Math.floor(Math.random() * characters.length + 1)])
+    password += characters[Math.floor(Math.random() * characters.length)]
   }
 
   return password
