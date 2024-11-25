@@ -27,21 +27,6 @@ const styles = StyleSheet.create({
     width: 248,
     marginTop: 8,
     borderRadius: 10
-  },
-  button: {
-    backgroundColor: colors.yellow,
-    width: 248,  
-    height: 32,
-    marginTop: 16,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 10
-  },
-  buttonText: {
-    fontSize: 20,
-    fontWeight: 700,
-    textAlign: "center"
   }
 });
 
