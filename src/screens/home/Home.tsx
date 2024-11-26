@@ -22,7 +22,7 @@ export default function Home() {
       setPasswordLength('1')
     }
     
-    if(isNumberChecked === false && isCapitalLetterChecked === false && isCapitalLetterChecked === false && isSpecialChecked === false) {
+    if(isNumberChecked === false && isCapitalLetterChecked === false && isLowercaseLetterChecked === false && isSpecialChecked === false) {
       Alert.alert("", "Leave at least one checkbox checked")
     }
   })
