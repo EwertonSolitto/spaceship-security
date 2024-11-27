@@ -12,7 +12,7 @@
 
 # Features 🔥
 
-- Strong password generation;
+- Strong password generation
 
 - Options for making your password more complex or not
 
