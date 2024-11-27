@@ -58,18 +58,6 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     marginInline: "auto"
   },
-  checkboxContainer: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  checkbox: {
-    borderColor: colors.yellow,
-  },
-  checkboxText: {
-    fontSize: 16,
-    marginLeft: 4,
-    fontWeight: 500
-  },
   inputConfigMenu: {
     display: "flex",
     flexDirection: "row",

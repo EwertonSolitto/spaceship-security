@@ -8,6 +8,7 @@ import { StatusBar } from 'expo-status-bar';
 import passwordGenerator from '../../scripts/passwordGenerator';
 import TCharacters from '../../types/TCharacters';
 import { CButton } from '../../components/CButton/CButton';
+import { CCheckbox } from '../../components/CCheckbox/CCheckbox';
 
 export default function Home() {
   const [password, setPassword] = useState('')
@@ -76,43 +77,27 @@ export default function Home() {
       />
 
       <View style={[styles.menu, openedMenu ? styles.opened : styles.closed]}>
+        
         <Text style={styles.configTitle}>Config</Text>
-        <View style={styles.checkboxContainer}>
-          <Checkbox
-            style={styles.checkbox}
-            value={isNumberChecked}
-            onValueChange={setIsNumberChecked}
-            color={isNumberChecked ? '#03050B' : undefined}
-          />
-          <Text style={styles.checkboxText}>Numbers</Text>
-        </View>
-        <View style={styles.checkboxContainer}>
-          <Checkbox
-            style={styles.checkbox}
-            value={isCapitalLetterChecked}
-            onValueChange={setIsCapitalLetterChecked}
-            color={isCapitalLetterChecked ? '#03050B' : undefined}
-          />
-          <Text style={styles.checkboxText}>Capital Letters</Text>
-        </View>
-        <View style={styles.checkboxContainer}>
-          <Checkbox
-            style={styles.checkbox}
-            value={isLowercaseLetterChecked}
-            onValueChange={setIsLowercaseLetter}
-            color={isLowercaseLetterChecked ? '#03050B' : undefined}
-          />
-          <Text style={styles.checkboxText}>Lowercase Letters</Text>
-        </View>
-        <View style={styles.checkboxContainer}>
-          <Checkbox
-            style={styles.checkbox}
-            value={isSpecialChecked}
-            onValueChange={setIsSpecialChecked}
-            color={isSpecialChecked ? '#03050B' : undefined}
-          />
-          <Text style={styles.checkboxText}>Special (!@#$%...)</Text>
-        </View>
+        <CCheckbox 
+          text='Numbers' 
+          isChecked={isNumberChecked} 
+          handleCheckbox={setIsNumberChecked} 
+        />
+        <CCheckbox 
+          text='Capital Letters' 
+          isChecked={isCapitalLetterChecked} 
+          handleCheckbox={setIsCapitalLetterChecked} />
+        <CCheckbox 
+          text='Lowercase Letters' 
+          isChecked={isLowercaseLetterChecked} 
+          handleCheckbox={setIsLowercaseLetter} 
+        />
+        <CCheckbox 
+          text='Special (!@#$%...)' 
+          isChecked={isSpecialChecked} 
+          handleCheckbox={setIsSpecialChecked} 
+        />
         <View style={styles.inputConfigMenu}>
           <Text style={styles.inputConfigTitle}>Number of Characters:</Text>
           <TextInput
