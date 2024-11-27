@@ -7,6 +7,7 @@ import styles from './HomeStyles';
 import { StatusBar } from 'expo-status-bar';
 import passwordGenerator from '../../scripts/passwordGenerator';
 import TCharacters from '../../types/TCharacters';
+import { CButton } from '../../components/CButton/CButton';
 
 export default function Home() {
   const [password, setPassword] = useState('')
@@ -62,16 +63,17 @@ export default function Home() {
         onChangeText={text => {setPassword(text)}}
       />
 
-      <TouchableOpacity style={styles.button} onPress={createPassword}>
-        <Text style={styles.buttonText}>🚀 Generate Password</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={copyPassword} disabled={password ? false : true}>
-        <Text style={styles.buttonText}>Copy</Text>
-      </TouchableOpacity>
+      <CButton text='🚀 Generate Password' func={createPassword} />
 
-      <TouchableOpacity onPress={() => setOpenedMenu(true)}>
-        <Text style={styles.configButton}>Config</Text>
-      </TouchableOpacity>
+      <CButton  text='Copy' func={copyPassword} isDisabled={password ? false : true} />
+
+      <CButton 
+        text='Config' 
+        func={() => 
+        setOpenedMenu(true)} 
+        textStyles={styles.configButtonText} 
+        buttonStyles={styles.configButton}
+      />
 
       <View style={[styles.menu, openedMenu ? styles.opened : styles.closed]}>
         <Text style={styles.configTitle}>Config</Text>
@@ -121,9 +123,12 @@ export default function Home() {
             maxLength={3}
           />
         </View>
-        <TouchableOpacity style={styles.closeButton} onPress={() => setOpenedMenu(false)}>
-          <Text style={styles.closeText}>Close</Text>
-        </TouchableOpacity>
+        <CButton
+          text='Close'
+          func={() => setOpenedMenu(false)}
+          buttonStyles={styles.closeButton}
+          textStyles={styles.closeText} 
+        />
       </View>
     </View>
   );
