@@ -4,7 +4,9 @@
     "description": "Spaceship Security is an app that creates strong password.",
     "slug": "spaceship-security",
     "version": "1.0.0",
-    "platforms": ["android"],
+    "platforms": [
+      "android"
+    ],
     "androidNavigationBar": {
       "barStyle": "light-content",
       "backgroundColor": "#03050B"
@@ -24,7 +26,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/spaceship-icon.png",
         "backgroundColor": "#03050B"
-      }
+      },
+      "package": "com.ewertonsolitto.spaceshipsecurity"
     },
     "extra": {
       "eas": {
