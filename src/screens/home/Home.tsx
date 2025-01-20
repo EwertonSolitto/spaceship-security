@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {Alert, Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {Alert, Image, Text, TextInput, View } from 'react-native';
 import * as Clipboard from "expo-clipboard";
-import Checkbox from 'expo-checkbox';
 
 import styles from './HomeStyles';
-import { StatusBar } from 'expo-status-bar';
 import passwordGenerator from '../../scripts/passwordGenerator';
 import TCharacters from '../../types/TCharacters';
 import { CButton } from '../../components/CButton/CButton';
@@ -53,8 +51,6 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor='auto' />
-
       <Text style={styles.title}>Spaceship Security</Text>
       <Image source={require('../../../assets/spaceship.jpeg')} style={styles.img} />
       <Text style={styles.text}>Protect your Spaceship with the best password</Text>

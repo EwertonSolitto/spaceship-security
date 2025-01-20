@@ -1,28 +1,35 @@
 {
   "expo": {
-    "name": "spaceship-security",
+    "name": "Spaceship Security",
+    "description": "Spaceship Security is an app that creates strong password.",
     "slug": "spaceship-security",
     "version": "1.0.0",
+    "platforms": ["android"],
+    "androidNavigationBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#03050B"
+    },
+    "backgroundColor": "#03050B",
+    "primaryColor": "#03050B",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/spaceship-icon.png",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/spaceship-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
+      "backgroundColor": "#03050B"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/spaceship-icon.png",
+        "backgroundColor": "#03050B"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "9702cd3c-6764-4069-bfe7-10fbfba8a0c9"
+      }
     }
   }
 }
