@@ -24,7 +24,9 @@
 
 # Download ⬇️
 
-ANDROID: https://expo.dev/accounts/ewertonsolitto/projects/spaceship-security/builds/0651012c-4e9a-44f8-9f49-1ba43aa81bdc
+The link may no longer be working.
+
+ANDROID: https://expo.dev/accounts/ewertonsolitto/projects/spaceship-security/builds/9b67fe31-fe26-4391-99eb-c78ceeeaab0a
 
 # Installation 🔧
 
